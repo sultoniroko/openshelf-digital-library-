@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenShelf Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a class="logo" href="#" aria-label="OpenShelf home">OpenShelf<span>.</span></a>
+            <a class="nav-link" href="#library">Explore Library</a>
+        </nav>
+
+        <section class="hero">
+            <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h1>Knowledge is only<br> a page away.</h1>
+            <p class="hero-text">Discover books and learning resources for your next big idea.</p>
+            <a class="primary-button" href="#library">Explore books</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="library-section" id="library">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+                    <h2>Explore the library</h2>
+                    <p class="muted">Search the collection or choose a subject.</p>
+                </div>
+                <span class="book-count" id="bookCount">0 books</span>
+            </div>
+
+            <div class="controls">
+                <label class="search-box">
+                    <span class="visually-hidden">Search books</span>
+                    <span aria-hidden="true">⌕</span>
+                    <input id="searchInput" type="search" placeholder="Search by title or author...">
+                </label>
+                <label class="filter-label">
+                    <span class="visually-hidden">Filter by category</span>
+                    <select id="categoryFilter">
+                        <option value="All">All categories</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Law">Law</option>
+                        <option value="Personal Development">Personal Development</option>
+                        <option value="Literature">Literature</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+            <p class="empty-message" id="emptyMessage" hidden>No books match your search. Try another title or category.</p>
+        </section>
+    </main>
+
+    <dialog class="book-dialog" id="bookDialog">
+        <button class="close-button" id="closeDialog" aria-label="Close book details">×</button>
+        <div id="dialogContent"></div>
+    </dialog>
+
+    <footer class="site-footer">
+        <p><strong>OpenShelf Digital Library</strong></p>
+        <p>A beginner frontend project built with HTML, CSS and JavaScript.</p>
+        <p class="copyright">© 2026 OpenShelf. Learning starts with curiosity.</p>
+    </footer>
+</body>
+</html>
